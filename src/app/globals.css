@@ -24,4 +24,89 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  cursor: none;
+}
+
+a {
+  cursor: none;
+}
+
+.custom-cursor { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e3e3e3;
+  border: 3px;
+  border-color: #e2e2e2;
+  border-style: solid;
+}
+.cursor-text {
+  font-size: 5px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  display: none;
+}
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: -200% 0 0 -200%;
+  z-index: 365;
+  height: 700%;
+  width: 700%;
+  animation: grain 7s steps(7) infinite;
+  background-image: url(/images/grain.webp);
+  background-repeat: repeat;
+  opacity: .08;
+}
+@keyframes grain {
+  0%,to {
+      transform: translate(0)
+  }
+
+  10% {
+      transform: translate(-5%,-10%)
+  }
+
+  20% {
+      transform: translate(-15%,5%)
+  }
+
+  30% {
+      transform: translate(7%,-25%)
+  }
+
+  40% {
+      transform: translate(-5%,25%)
+  }
+
+  50% {
+      transform: translate(-15%,10%)
+  }
+
+  60% {
+      transform: translate(15%)
+  }
+
+  70% {
+      transform: translateY(15%)
+  }
+
+  80% {
+      transform: translate(3%,35%)
+  }
+
+  90% {
+      transform: translate(-10%,10%)
+  }
 }
