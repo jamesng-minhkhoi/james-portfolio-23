@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from './components/Navbar/navbar'
 import Cursor from './components/Cursor/cursor'
 import Grain from './components/grain'
+import Footer from './components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,8 +24,9 @@ export default function RootLayout({
       <body className={inter.className}>          
         <Cursor></Cursor>
         <Grain></Grain>
-        <Navbar className='flex fixed bottom-8 justify-center w-screen'></Navbar>
+        {/* <Navbar className='flex fixed bottom-8 justify-center w-screen'></Navbar> */}
         {children}
+        <Footer></Footer>
       </body>
     </html>
   )
